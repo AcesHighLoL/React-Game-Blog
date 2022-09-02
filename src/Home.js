@@ -1,18 +1,18 @@
-const Home = () => {
+import { useState } from "react";
+import Bloglist from "./BlogList";
 
-    const handleClick = () =>{
-        console.log('hello');
-    }
+const Home = () => {
+    const [blogs, setBlogs] = useState([
+        {title: 'DOOM (2020)', body: 'lorem ipsum...', author: 'Jean Paul', id: 1},
+        {title: 'Elden Ring', body: 'lorem ipsum...', author: 'Brandon Timber', id: 2},
+        {title: 'Escape from Tarkov', body: 'lorem ipsum...', author: 'Nelson Weathers', id: 3}
+    ]);
 
     return ( 
         <div className="Home">
-            <h2>Homepage</h2>
-            <button onClick={handleClick}>Click Me</button>
+           <Bloglist blogs = {blogs} title = "All Blogs"/>
         </div>
      );
 }
  
 export default Home;
-<div className="Home">
-
-</div>
